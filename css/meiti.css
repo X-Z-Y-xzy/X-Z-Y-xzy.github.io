@@ -1,0 +1,141 @@
+body{
+	margin:0;
+	text-align:center;
+	font-family:"微软雅黑";
+	font-size:14px;
+}
+header{
+	background:#999;
+	padding:10px 0;
+position: fixed;
+z-index: 999;
+top: 0;
+width:100%;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#nav{
+	width:900px;
+	height:30px; 
+	margin:0 auto;
+}
+#nav ul{
+	padding:0;/*ul默认存在40px的左内边距*/
+	margin:0;/*ul默认存在14px的上、下外边距*/
+	list-style-type:none;	
+}
+#nav ul li{
+	position:relative;
+	float:left;/*浮动使li具有行内块级元素的绝大部分特点，使同一行中可以显示多个li元素*/
+	height:30px;
+	line-height:30px;
+	overflow:hidden;
+}
+
+#nav ul li a{
+	color:#fff;
+	text-decoration:none;
+	float:left;/*使a具有行内块级元素的一些特点，从而可以设置宽度*/
+	width:100px;
+}
+
+.subNav{
+	position:absolute;
+	width:200px;
+	top:30px;
+	right:0; 
+	padding:5px;
+	background:#666;
+}
+#nav ul li .subNav a{
+	font-weight:normal;/*这里通过最近优先原则重置了JS设置的li的内联CSS代码 */
+}
+#nav ul li .subNav a:hover{
+	color:#f00;
+	background:#999;
+} 
+
+
+
+
+
+
+
+
+
+
+.sidebar {
+  margin-top:50px;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* 侧边栏链接 */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* 活动/当前链接 */
+.sidebar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* 鼠标悬停链接 */
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* 页面内容。 margin-left 属性的值应该与侧边栏的 width 属性的值匹配 */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+text-align:left
+}
+
+/* 在宽度小于 700px 的屏幕上，将侧边栏变成顶部栏 */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* 在小于 400px 的屏幕上，垂直显示栏，而不是水平显示 */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+.o{margin-top:50px;}
+img{
+	width: 120px;
+	height: 120px;
+border-radius:2em;
+}
+#pic {
+	width: 100%;
+	/* 实现 div 内容在浏览器窗口中水平居中 */ 
+}
+#pic ul {
+   padding: 20px 0 10px;/*ul的左内边距默认为40px*/
+   margin: 0;/*ul默认的上、下边距为12px*/
+   background: #eee;
+   list-style: none;/* 取消列表项前面的标记符号 */
+}
+#pic ul li {
+   margin: 5px 10px;
+   display: inline-block;/* 将块级元素的li修改为行内块元素 */ 
+}
